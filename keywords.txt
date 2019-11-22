@@ -1,0 +1,30 @@
+#######################################
+# Syntax Coloring Map For Rotoencoder
+####################################### 
+# Class (KEYWORD1)
+#######################################
+
+Rotoencoder	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2) 
+#######################################	
+
+begin			KEYWORD2
+getRotoVal		KEYWORD2
+getSW			KEYWORD2
+getSWholdTime	KEYWORD2
+setSWdebounceTime	KEYWORD2
+setRotoDebounceTime	KEYWORD2
+
+######################################
+# Instances (KEYWORD2)
+#######################################
+
+RotoEnc_1 		KEYWORD2
+RotoEnc_2 		KEYWORD2
+
+#######################################
+# Constants
+#######################################
+ 
