@@ -110,5 +110,5 @@ int Rotoencoder::setSWdebounceTime(int t) {
 }
 
 int Rotoencoder::setRotoDebounceTime(int t) {
-	setRotoDebounceTime = t;
+	rotoDebounceTime = t;
 }
