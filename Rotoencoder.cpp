@@ -52,8 +52,8 @@ void Rotoencoder::isr0()
   }  
   
 void Rotoencoder::handleInterrupt() {
-  uint8_t _sreg;
-  _sreg = SREG;
+  //uint8_t _sreg;
+  //_sreg = SREG;
   if (millis() > (lastRotoTime + rotoDebounceTime)) {
 	uint8_t _data;
 	_data = digitalRead(_dataPin);
@@ -65,14 +65,14 @@ void Rotoencoder::handleInterrupt() {
     }
     lastRotoTime = millis();
   }
-  SREG = _sreg;
+  //SREG = _sreg;
 }
 
 int Rotoencoder::getRotoVal() {
-  cli();
+  noInterrupts();
   int v = _rotocounter;
   _rotocounter = 0;
-  sei();
+  interrupts();
   return v;
 }
 
@@ -105,10 +105,10 @@ int Rotoencoder::getSW() {
   return sw;
 }
 
-int Rotoencoder::setSWdebounceTime(int t) {
+void Rotoencoder::setSWdebounceTime(int t) {
 	SWdebounceTime = t;
 }
 
-int Rotoencoder::setRotoDebounceTime(int t) {
+void Rotoencoder::setRotoDebounceTime(int t) {
 	rotoDebounceTime = t;
 }
