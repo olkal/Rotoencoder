@@ -37,8 +37,8 @@ public:
 	int getRotoVal();	
 	int getSW();
 	int getSWholdTime();
-	int setSWdebounceTime(int t);
-	int setRotoDebounceTime(int t);
+	void setSWdebounceTime(int t);
+	void setRotoDebounceTime(int t);
 
 };
 
